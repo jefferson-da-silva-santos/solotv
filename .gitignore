@@ -17,11 +17,6 @@ logs/
 pids/
 *.pid.lock
 
-# Ambiente
-.env
-.env.*
-!.env.example
-
 # Build / Produção
 dist/
 build/
