@@ -1,3 +1,5 @@
+export const BASE_URL = '/api/v1';
+
 export const API_MESSAGES = {
   // token
   TOKEN_NOT_PROVIDED: 'Token was not provided',

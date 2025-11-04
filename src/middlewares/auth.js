@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import logger from '../utils/logger.js';
-import { API_MESSAGES } from '../utils/consts.js';
+import { API_MESSAGES } from '../utils/constant.js';
 
 const auth = (req, res, next) => {
   try {

@@ -2,10 +2,10 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
 import { schemaUserLogin } from "../../utils/validations.js";
-import AbstractService from "../abstract.service.js";
-import { API_MESSAGES } from "../../utils/consts.js";
+import { API_MESSAGES } from "../../utils/constant.js";
 import logger from "../../utils/logger.js";
 import { ApiError } from "../../utils/error.js";
+import AbstractService from "../AbstractService.js";
 
 export class UserLoginService extends AbstractService {
   constructor(repository) {
