@@ -25,7 +25,7 @@ O **Sotov** é um framework backend em **Node.js**, **Express** e **Sequelize**,
 Seu projeto utiliza as seguintes bibliotecas essenciais:
 
   * **`express`**: Framework web minimalista para Node.js.
-  * **`sequelize`**: ORM (Object-Relational Mapper) robusto para bancos de dados SQL.
+  * **`sequelize`**, **`pg`**, **`pg-hstore`**: ORM robusto e driver para bancos de dados SQL (PostgreSQL).
   * **`dotenv`**: Para carregar variáveis de ambiente (`.env`).
   * **`winston`**: Sistema de logging profissional.
   * **`joi`**: Para validação de schemas de requisição.
@@ -34,6 +34,15 @@ Seu projeto utiliza as seguintes bibliotecas essenciais:
   * **`jsonwebtoken`**: Para manipulação de tokens JWT.
   * **`cors`** e **`helmet`**: Middlewares de segurança e proteção HTTP.
   * **`express-rate-limit`**: Middleware para limitação de taxa de requisições.
+  * **`swagger-jsdoc`** / **`swagger-ui-express`**: Para documentação automática de API (OpenAPI).
+
+### ⚙️ Dependências de Desenvolvimento
+
+Para garantir a qualidade do código, o Sotov utiliza:
+
+  * **`jest`**: Framework para testes unitários e de integração.
+  * **`supertest`**: Biblioteca para testar endpoints HTTP de forma fácil.
+  * **`nodemon`**: Para recarregamento automático durante o desenvolvimento (`npm run dev`).
 
 ### 💻 Rodando o Servidor
 
@@ -52,13 +61,21 @@ Por padrão, o servidor inicia na porta definida em `.env` ou **3000**:
 > Servidor rodando em `http://localhost:<PORT>`
 > ✅ Database connected\!
 
+### 🧪 Rodando os Testes
+
+Para executar os testes de unidade e integração, use o script dedicado. A flag `--runInBand` garante que os testes sejam executados sequencialmente, o que é importante para evitar conflitos de banco de dados:
+
+```bash
+npm test
+# ou:
+npm run test
+```
+
 -----
 
 ## 📂 Estrutura de Diretórios 🗂️
 
 A estrutura do Sotov é dividida de forma clara, garantindo a **Separação de Preocupações** (SoC) e facilitando a localização de cada componente.
-
------
 
 | Diretório | Descrição |
 | :--- | :--- |
@@ -73,6 +90,7 @@ A estrutura do Sotov é dividida de forma clara, garantindo a **Separação de P
 | **`src/seeders`** | Scripts para popular o banco de dados (dados iniciais/teste). |
 | **`src/services`** | **Núcleo da lógica de negócio**. Contém `AbstractService` e a lógica específica (ex: `user/LoginUserService.js`). |
 | **`src/utils`** | Ferramentas globais (Cache, Constantes, Logger, Validações e `ApiError`). |
+| **`test`** | **Diretório dedicado para todos os testes** (Unitários e de Integração). |
 | **`app.js`** | Configuração e inicialização do Express, com injeção de dependências. |
 | **`index.js`** | Ponto de entrada da aplicação, conexão com DB e inicialização do servidor. |
 
