@@ -1,11 +1,20 @@
 import winston from "winston";
-import path from 'path';
+import path from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const caminhoLog = path.join(__dirname, "../logs/app.log");
 
+/**
+ * Winston logger configuration.
+ * 
+ * Handles application logging to both console and file.
+ * Uses timestamped log entries with size and file rotation control.
+ *
+ * @constant
+ * @type {import('winston').Logger}
+ */
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -17,8 +26,8 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File({
       filename: caminhoLog,
-      maxsize: 5 * 1024 * 1024, // 5MB
-      maxFiles: 5,
+      maxsize: 5 * 1024 * 1024, // 5MB per file
+      maxFiles: 5, // Keeps the last 5 log files
     }),
     new winston.transports.Console({
       format: winston.format.colorize({ all: true }),

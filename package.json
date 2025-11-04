@@ -22,9 +22,9 @@
   "license": "MIT",
   "author": "Jefferson Dev",
   "type": "module",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "nodemon indexjs",
     "test": "jest --runInBand"
   },
   "dependencies": {
