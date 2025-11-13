@@ -1,36 +1,42 @@
 {
-  "name": "solotv",
+  "name": "solov",
   "version": "1.0.0",
-  "description": "Framework BackEnd com Express, Sequelize e Factory",
+  "description": "Framework BackEnd com Express, Sequelize e padrão Factory",
   "keywords": [
-    "Solotv",
-    "Mira",
-    "Express",
-    "NodeJs",
-    "Factory",
-    "Sequelize",
-    "Atirador"
+    "solov",
+    "framework",
+    "backend",
+    "express",
+    "nodejs",
+    "sequelize",
+    "mvc",
+    "rest-api"
   ],
-  "homepage": "https://github.com/jefferson-da-silva-santos/solotv#readme",
+  "homepage": "https://github.com/jefferson-da-silva-santos/solov#readme",
   "bugs": {
-    "url": "https://github.com/jefferson-da-silva-santos/solotv/issues"
+    "url": "https://github.com/jefferson-da-silva-santos/solov/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jefferson-da-silva-santos/solotv.git"
+    "url": "git+https://github.com/jefferson-da-silva-santos/solov.git"
   },
   "license": "MIT",
   "author": "Jefferson Dev",
   "type": "module",
   "main": "index.js",
+  "files": [
+    "src/",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "dev": "nodemon indexjs",
+    "dev": "nodemon index.js",
     "test": "jest --runInBand"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
-    "crypto": "^1.0.1",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
@@ -42,7 +48,6 @@
     "pg": "^8.16.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.7",
-    "sequelize-cli": "^6.6.3",
     "sqlite3": "^5.1.7",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
@@ -51,6 +56,7 @@
   "devDependencies": {
     "jest": "^30.2.0",
     "nodemon": "^3.1.4",
-    "supertest": "^7.1.4"
+    "supertest": "^7.1.4",
+    "sequelize-cli": "^6.6.3"
   }
 }
