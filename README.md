@@ -16,9 +16,25 @@
 
 O **Sotov** é um framework backend em **Node.js**, **Express** e **Sequelize**, baseado no **padrão Factory** e **Injeção de Dependência**. Feito pra quem valoriza **organização, produtividade e código limpo**, oferecendo uma arquitetura de API completa e modular.
 
------
+Claro! Aqui está **somente a parte de instalação**, no formato correto e já pronta para colocar no seu README:
 
-## 🚀 Instalação e Execução
+---
+
+# 📦 Instalação via NPM
+
+Instale o Solov diretamente do npm:
+
+```bash
+npm install solov
+```
+
+Ou com Yarn:
+
+```bash
+yarn add solov
+```
+
+---
 
 ### 📋 Dependências Principais
 
