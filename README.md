@@ -38,7 +38,7 @@ yarn add solov
 
 ### 📋 Dependências Principais
 
-Seu projeto utiliza as seguintes bibliotecas essenciais:
+Bibliotecas essenciais:
 
   * **`express`**: Framework web minimalista para Node.js.
   * **`sequelize`**, **`pg`**, **`pg-hstore`**: ORM robusto e driver para bancos de dados SQL (PostgreSQL).
